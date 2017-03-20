@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link type="text/css" rel="stylesheet" href="css/style.css"></link>
+</head>
+<body>
+	<div th:if="${message}">
+		<h2 th:text="${message}" />
+	</div>
+	<div>
+		<h4>Application has encountered an error!!!..Please go back to
+			the home page !!</h4>
+		<a href="/uploadFile">Back to UploadForm!</a>
+	</div>
+</body>
+</html>

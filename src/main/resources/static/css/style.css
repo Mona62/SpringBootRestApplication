@@ -1,0 +1,14 @@
+@CHARSET "ISO-8859-1";
+
+h1,h2,h3,h4,h5,h6 {
+	color: blue;
+}
+
+body{
+	
+	background-position: center top;
+	background-repeat: no-repeat;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 5% 
+}

@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link type="text/css" rel="stylesheet" href="css/style.css"></link>
+</head>
+<body>
+    <h2>Requested file id meta data</h2>
+    <div>
+        <ul>
+			
+                <li th:text="${filesMetaData.id}" />
+                <li th:text="${filesMetaData.fname}" />
+                <li th:text="${filesMetaData.contentType}" />
+                <li th:text="${filesMetaData.created}" />
+ 	
+        </ul>
+    </div>
+    <div>
+<!--         <h3 th:text="${totalFiles}"/> -->
+        <a href="/uploadFile">Back to UploadForm!</a>
+    </div>
+     
+</body>
+</html>

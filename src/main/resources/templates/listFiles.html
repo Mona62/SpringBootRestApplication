@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link type="text/css" rel="stylesheet" href="css/style.css"></link>
+</head>
+<body>
+    <h2>List All Uploaded Files</h2>
+    <div>
+        <ul>
+            <li th:each="file : ${files}">
+                <a th:href="${file}" th:text="${file}" />
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h3 th:text="${totalFiles}"/>
+        <a href="/uploadFile">Back to UploadForm!</a>
+    </div>
+     
+</body>
+</html>

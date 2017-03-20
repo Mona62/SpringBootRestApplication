@@ -1,0 +1,52 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link type="text/css" rel="stylesheet" href="css/style.css"></link>
+</head>
+<body>
+<h1> UPLOAD FILE : </h1>
+	<div>
+		<form method="POST" enctype="multipart/form-data" action="/uploadFile">
+			<table>
+				<tr>
+					<td>File to upload:</td>
+					<td><input type="file" name="file" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Upload" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	
+	<div th:if="${message}">
+		<h2 th:text="${message}"></h2>
+	</div>
+	
+<br></br>
+<h1> GET FILES : </h1>	
+	<div>
+		<ul>
+			<li><a href="/files">Get List Files</a></li>
+			<li><a href="/files/filesInLastHour">Get Files Uploaded In Last
+					Hour</a></li>
+		</ul>
+	</div>
+<br></br>
+<h1> SEARCH FILE METADATA WITH FILE ID : </h1>	
+	<div>
+		<form method="GET" action="/files/{fileId}">
+			<table>
+				<tr>
+					<td>Enter file id to get File Meta Data</td>
+					<td><input type="text" name="fileId" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="getMetaData" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
